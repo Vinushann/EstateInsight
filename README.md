@@ -194,7 +194,7 @@ Contributions are welcome! If you'd like to improve this project, please follow 
 2. **Clone Your Fork**
 
    ```bash
-   git clone https://github.com/your-username/your-forked-repo.git
+   git clone https://github.com/Vinushann/The-Analytica.git
    cd your-forked-repo
    ```
 
