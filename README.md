@@ -1,1 +1,1 @@
-# EstateInsight
+# The Analytica
