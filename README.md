@@ -220,10 +220,6 @@ Contributions are welcome! If you'd like to improve this project, please follow 
    - Go to the original repository and click on "New Pull Request".
    - Select your branch and submit the pull request for review.
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ## Acknowledgments
 
 - **Kaggle** for providing the Bengaluru housing prices dataset.
