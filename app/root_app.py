@@ -60,8 +60,8 @@ def main():
     # Input fields for location, sqft, bhk, bath in the sidebar
     location = st.sidebar.selectbox("Select Location", __locations)
     sqft = st.sidebar.slider('Square Foot Area (sqft)', 300, 10000, 1000)
-    bath = st.sidebar.slider('Number of Bathrooms', 1, 10, 2)
-    bhk = st.sidebar.slider('Number of Bedrooms (BHK)', 1, 10, 2)
+    bath = st.sidebar.slider('Number of Bathrooms', 1, 13, 2)
+    bhk = st.sidebar.slider('Number of Bedrooms (BHK)', 1, 9, 2)
 
     # Display the user inputs as a table
     user_input_data = {
