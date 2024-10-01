@@ -31,14 +31,22 @@ def get_estimated_price(location, sqft, bhk, bath):
         loc_index = __data_columns.index(location.lower())
     except:
         loc_index = -1
+    # print(loc_index) #This gives the col number of the "location" which we get, of columns.json
 
     # Initialize a zero array for the input features
-    x = np.zeros(len(__data_columns))
+    x = np.zeros(len(__data_columns)) 
+    # print(x.shape) #This is a 1d array(row) with 243 cols(ie, the cols in columns.json). The reason to create a zeros array is cuz then only for the passed location parameter, we can assign the one hot encoding this noh
     x[0] = sqft
     x[1] = bath
     x[2] = bhk
     if loc_index >= 0:
         x[loc_index] = 1  # Set the correct location index to 1 (one-hot encoding)
+    
+    #So, now when print x, it's values are like this(ie if the inputs are for sqft being 1250, bath being 2, bhd being 2, and the location being "1st phase jp nagar")
+    # print(x) # [1250.0, 2, 2, 0, 1, 0, ..., 0, 0, 0, 0, 0, 0, 0, 0]
+    
+    # print(__model.predict([x]))#This gives [198.6669157724992]
+    # print(__model.predict([x])[0]) #This gives 198.6669157724992
 
     # Predict the price and return it
     return round(__model.predict([x])[0], 2)
@@ -50,7 +58,7 @@ def main():
 
     # Page Title
     st.write("""
-    # Bangalore House Price Prediction App
+    # Bengaluru House Price Prediction App
     Use the sliders to adjust input values and get predictions based on a pre-trained model.
     """)
 
@@ -82,3 +90,5 @@ def main():
 
 if __name__ == '__main__':
     main()
+    # print(get_estimated_price("1st block jayanagar", 1000, 2, 1))
+
