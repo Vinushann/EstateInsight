@@ -16,8 +16,13 @@ def load_saved_artifacts():
 
     # Load columns from JSON
     with open("./columns.json", "r") as f:
-        __data_columns = json.load(f)['data_columns']
-        __locations = __data_columns[3:]  # first 3 columns are sqft, bath, bhk
+        if f == None:
+            print("file is not availabe")
+        else:
+            print("file is available")
+            print(f)
+            __data_columns = json.load(f)['data_columns']
+            __locations = __data_columns[3:]  # first 3 columns are sqft, bath, bhk
 
     # Load the trained model from pickle
     global __model
