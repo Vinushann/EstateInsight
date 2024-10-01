@@ -15,7 +15,7 @@ def load_saved_artifacts():
     global __locations
 
     # Load columns from JSON
-    with open("columns.json", "r") as f:
+    with open("./columns.json", "r") as f:
         __data_columns = json.load(f)['data_columns']
         __locations = __data_columns[3:]  # first 3 columns are sqft, bath, bhk
 
