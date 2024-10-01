@@ -15,7 +15,7 @@ def load_saved_artifacts():
     global __locations
 
     # Load columns from JSON
-    with open("./columns.json", "r") as f:
+    with open("../data/columns.json", "r") as f:
         if f == None:
             print("file is not availabe")
         else:
@@ -27,7 +27,7 @@ def load_saved_artifacts():
     # Load the trained model from pickle
     global __model
     if __model is None:
-        with open('banglore_home_prices_model_2.pickle', 'rb') as f:
+        with open('../models/banglore_home_prices_model_2.pickle', 'rb') as f:
             __model = pickle.load(f)
 
 # Function to estimate the price based on user inputs
